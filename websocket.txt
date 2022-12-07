@@ -1,0 +1,31 @@
+The follwing link is to use websocket at any websocket broswer
+
+ws://127.0.0.1:8000/message/1
+
+in this link 1 is teh consevation ID
+
+and use this link as
+
+ws://127.0.0.1:8000/message/1/?token=d0c7e4da674e3ccbe5ecc2b75b20a91574359375
+
+The token to authenticate it
+
+
+And to send the message use this text
+
+{
+    "chat_text":"Here is text"
+}
+
+and you will recienve
+
+{
+    'chat_id': 15,
+    'chat_text': 'Here is text',
+    'chat_time': '00:07:48.790404',
+    'chat_date': '2022-12-07',
+    'chat_sender': 2,
+    'chat_conservation': 1
+}
+
+Thank You!!

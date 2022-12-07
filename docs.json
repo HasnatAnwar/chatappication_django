@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "8f9a3e85-1fcc-4341-ba1c-e15901c5316e",
+		"name": "chatapplication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "registration",
+			"item": [
+				{
+					"name": "sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_name",
+									"value": "Kabeer",
+									"type": "default"
+								},
+								{
+									"key": "user_pass1",
+									"value": "kabeer09",
+									"type": "default"
+								},
+								{
+									"key": "user_pass2",
+									"value": "kabeer09",
+									"type": "default"
+								}
+							]
+						},
+						"url": "{{localhost}}/chat/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "signin_user",
+									"value": "Kabeer",
+									"type": "default"
+								},
+								{
+									"key": "signin_pass",
+									"value": "kabeer09",
+									"type": "default"
+								}
+							]
+						},
+						"url": "{{localhost}}/chat/signin"
+					},
+					"response": []
+				},
+				{
+					"name": "token aut",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "default"
+								}
+							]
+						},
+						"url": "{{localhost}}/api-token-auth/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chat",
+			"item": [
+				{
+					"name": "see Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token d0c7e4da674e3ccbe5ecc2b75b20a91574359375",
+								"type": "default"
+							}
+						],
+						"url": "{{localhost}}/chat/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token d0c7e4da674e3ccbe5ecc2b75b20a91574359375",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pro_name",
+									"value": "kabeer",
+									"type": "default"
+								},
+								{
+									"key": "pro_picture",
+									"type": "file",
+									"src": "/C:/Users/Hasnat/Pictures/Screenshots/Screenshot (2).png"
+								}
+							]
+						},
+						"url": "{{localhost}}/chat/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "update profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token d0c7e4da674e3ccbe5ecc2b75b20a91574359375",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "pro_name",
+									"value": "kabeer",
+									"type": "default"
+								},
+								{
+									"key": "pro_picture",
+									"type": "file",
+									"src": "/C:/Users/Hasnat/Pictures/Screenshots/Screenshot (2).png",
+									"disabled": true
+								}
+							]
+						},
+						"url": "{{localhost}}/chat/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "profile for the other person",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token d0c7e4da674e3ccbe5ecc2b75b20a91574359375",
+								"type": "default"
+							}
+						],
+						"url": "{{localhost}}/chat/other/1"
+					},
+					"response": []
+				},
+				{
+					"name": "create conservation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token d0c7e4da674e3ccbe5ecc2b75b20a91574359375",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cons_second",
+									"value": "2",
+									"type": "default"
+								}
+							]
+						},
+						"url": "{{localhost}}/chat/conservation"
+					},
+					"response": []
+				},
+				{
+					"name": "see all consevation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token d0c7e4da674e3ccbe5ecc2b75b20a91574359375",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cons_second",
+									"value": "2",
+									"type": "default"
+								}
+							]
+						},
+						"url": "{{localhost}}/chat/conservation"
+					},
+					"response": []
+				},
+				{
+					"name": "chat",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token d0c7e4da674e3ccbe5ecc2b75b20a91574359375",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cons_second",
+									"value": "2",
+									"type": "default"
+								}
+							]
+						},
+						"url": "{{localhost}}/chat/chat/1"
+					},
+					"response": []
+				},
+				{
+					"name": "add sms",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token d0c7e4da674e3ccbe5ecc2b75b20a91574359375",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cons_second",
+									"value": "2",
+									"type": "default"
+								},
+								{
+									"key": "chat_text",
+									"value": "Here is the message",
+									"type": "default"
+								}
+							]
+						},
+						"url": "{{localhost}}/chat/chat/1"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localhost",
+			"value": "http://127.0.0.1:8000",
+			"type": "default"
+		}
+	]
+}
