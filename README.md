@@ -9,7 +9,8 @@ real time senerio in Django.
 ## Main Libraries
 
 - django
-- django-restframework- channels
+- django-restframework
+- channels
 - redis
 
 
